@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/listMoviesFragment">
+    <fragment
+        android:id="@+id/listMoviesFragment"
+        android:name="com.example.obssmovieapp_1.features.movieList.ListMoviesFragment"
+        android:label="ListMoviesFragment" >
+        <action
+            android:id="@+id/action_listMoviesFragment_to_searchMovieFragment"
+            app:destination="@id/searchMovieFragment" />
+        <action
+            android:id="@+id/action_listMoviesFragment_to_movieDetailFragment2"
+            app:destination="@id/movieDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchMovieFragment"
+        android:name="com.example.obssmovieapp_1.features.movieSearch.SearchMovieFragment"
+        android:label="SearchMovieFragment" >
+        <argument
+            android:name="searchedQuery"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_searchMovieFragment_to_movieDetailFragment2"
+            app:destination="@id/movieDetailFragment2" />
+        <action
+            android:id="@+id/action_searchMovieFragment_self"
+            app:destination="@id/searchMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFavoritesFragment"
+        android:name="com.example.obssmovieapp_1.features.favoritesList.ListFavoritesFragment"
+        android:label="ListFavoritesFragment" >
+        <action
+            android:id="@+id/action_listFavoritesFragment_to_movieDetailFragment2"
+            app:destination="@id/movieDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment2"
+        android:name="com.example.obssmovieapp_1.features.movieDetail.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+        <argument
+            android:name="detailedMovie"
+            app:argType="com.example.obssmovieapp_1.models.Movie" />
+        <action
+            android:id="@+id/action_movieDetailFragment2_self"
+            app:destination="@id/movieDetailFragment2" />
+    </fragment>
+</navigation>

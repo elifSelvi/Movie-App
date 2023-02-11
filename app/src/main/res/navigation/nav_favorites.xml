@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_favorites"
+    app:startDestination="@id/listFavoritesFragment_navFavs">
+
+    <fragment
+        android:id="@+id/listFavoritesFragment_navFavs"
+        android:name="com.example.obssmovieapp_1.features.favoritesList.ListFavoritesFragment"
+        android:label="ListFavoritesFragment" >
+        <action
+            android:id="@+id/action_listFavoritesFragment_navFavs_to_movieDetailFragment_navFavs"
+            app:destination="@id/movieDetailFragment_navFavs" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment_navFavs"
+        android:name="com.example.obssmovieapp_1.features.movieDetail.MovieDetailFragment"
+        android:label="MovieDetailFragment" />
+</navigation>

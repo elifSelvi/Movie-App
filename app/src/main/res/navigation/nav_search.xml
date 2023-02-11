@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_search"
+    app:startDestination="@id/searchMovieFragment_navSearch">
+
+    <fragment
+        android:id="@+id/searchMovieFragment_navSearch"
+        android:name="com.example.obssmovieapp_1.features.movieSearch.SearchMovieFragment"
+        android:label="SearchMovieFragment" >
+        <action
+            android:id="@+id/action_searchMovieFragment_navSearch_to_movieDetailFragment_navSearch"
+            app:destination="@id/movieDetailFragment_navSearch" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment_navSearch"
+        android:name="com.example.obssmovieapp_1.features.movieDetail.MovieDetailFragment"
+        android:label="MovieDetailFragment" />
+</navigation>

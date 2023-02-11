@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/listMoviesFragment_navHome">
+
+    <fragment
+        android:id="@+id/listMoviesFragment_navHome"
+        android:name="com.example.obssmovieapp_1.features.movieList.ListMoviesFragment"
+        android:label="ListMoviesFragment" >
+        <action
+            android:id="@+id/action_listMoviesFragment_navHome_to_searchMovieFragment_navHome"
+            app:destination="@id/searchMovieFragment_navHome" />
+        <action
+            android:id="@+id/action_listMoviesFragment_navHome_to_movieDetailFragment_navHome"
+            app:destination="@id/movieDetailFragment_navHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchMovieFragment_navHome"
+        android:name="com.example.obssmovieapp_1.features.movieSearch.SearchMovieFragment"
+        android:label="SearchMovieFragment" />
+    <fragment
+        android:id="@+id/movieDetailFragment_navHome"
+        android:name="com.example.obssmovieapp_1.features.movieDetail.MovieDetailFragment"
+        android:label="MovieDetailFragment" />
+</navigation>
